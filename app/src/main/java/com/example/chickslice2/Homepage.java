@@ -15,6 +15,7 @@ private ImageButton btnscan,profile,btnAyamBroiler;
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_homepage);
+        
         btnscan=findViewById(R.id.btnscan);
         profile=findViewById(R.id.profile);
         btnAyamBroiler=findViewById(R.id.btnAyamBroiler);
