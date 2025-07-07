@@ -50,7 +50,7 @@
                                 if(response.contains("Selamat Datang")){
                                     Toast.makeText(getApplicationContext(),"Login Berhasil",Toast.LENGTH_SHORT).show();
 
-                                    startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                                    startActivity(new Intent(getApplicationContext(),Homepage.class));
                                 }else {
                                     Toast.makeText(getApplicationContext(),"Login Gagal",Toast.LENGTH_SHORT).show();
                                 }
