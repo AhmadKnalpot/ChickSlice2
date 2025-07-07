@@ -3,7 +3,6 @@ package com.example.chickslice2;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 
 import androidx.activity.EdgeToEdge;
@@ -12,17 +11,17 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class Scan extends AppCompatActivity {
-private Button btn_qr,btn_scan;
-private ImageButton profile,home;
+public class Riwayat extends AppCompatActivity {
+private ImageButton btnBack,btnriwayat,profile,btnscan,home;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_scan);
-        btn_qr=findViewById(R.id.btn_qr);
-        btn_scan=findViewById(R.id.btn_scan);
-        profile=findViewById(R.id.profile);
+        setContentView(R.layout.activity_riwayat);
+        btnBack=findViewById(R.id.btnBack);
+        btnriwayat=findViewById(R.id.btnriwayat);
         home=findViewById(R.id.home);
+        profile=findViewById(R.id.profile);
+        btnscan=findViewById(R.id.btnscan);
 
         home.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -30,10 +29,10 @@ private ImageButton profile,home;
                 startActivity(new Intent(getApplicationContext(),Homepage.class));
             }
         });
-        btn_scan.setOnClickListener(new View.OnClickListener() {
+        btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //startActivity(new Intent(getApplicationContext(),QR.class)); //belum ada masih sama ramzi
+                startActivity(new Intent(getApplicationContext(),Homepage.class));
             }
         });
         profile.setOnClickListener(new View.OnClickListener() {
@@ -43,6 +42,18 @@ private ImageButton profile,home;
             }
         });
 
+        btnscan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(),Scan.class));
+            }
+        });
 
+        btnriwayat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(),Riwayat.class));
+            }
+        });
     }
 }

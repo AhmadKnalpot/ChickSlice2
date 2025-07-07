@@ -15,6 +15,15 @@
         android:theme="@style/Theme.ChickSlice2"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".Riwayat"
+            android:exported="false" />
+        <activity
+            android:name=".Checkout"
+            android:exported="false" />
+        <activity
+            android:name=".Detail_Produk"
+            android:exported="false" />
+        <activity
             android:name=".Profile"
             android:exported="false" />
         <activity
@@ -47,6 +56,10 @@
         <activity
             android:name=".MainActivity"
             android:exported="true" />
+        <activity
+            android:name=".Search_Bar"
+            android:exported="false"/>
+
     </application>
 
 </manifest>

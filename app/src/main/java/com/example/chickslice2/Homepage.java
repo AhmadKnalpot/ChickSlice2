@@ -9,16 +9,31 @@ import android.widget.ImageButton;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Homepage extends AppCompatActivity {
-private ImageButton btnscan,profile,btnAyamBroiler;
+private ImageButton btnscan,profile,btnAyamBroiler,btnriwayat,home,pencarian;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_homepage);
-        btnscan=findViewById(R.id.btnscan);
         profile=findViewById(R.id.profile);
+        btnscan=findViewById(R.id.btnscan);
+        btnriwayat=findViewById(R.id.btnriwayat);
+        home=findViewById(R.id.home);
         btnAyamBroiler=findViewById(R.id.btnAyamBroiler);
+        pencarian=findViewById(R.id.pencarian);
 
+        pencarian.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(),Search_Bar.class));
+            }
+        });
+        home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(),Homepage.class));
+            }
+        });
         btnAyamBroiler.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -39,5 +54,12 @@ private ImageButton btnscan,profile,btnAyamBroiler;
                 startActivity(new Intent(getApplicationContext(),Scan.class));
         }
     });
+
+        btnriwayat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(),Riwayat.class));
+            }
+        });
     }
 }
