@@ -11,18 +11,20 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class Riwayat extends AppCompatActivity {
-private ImageButton btnBack,btnriwayat,profile,btnscan,home,pencarian;
+public class Konfirmasi extends AppCompatActivity {
+    private ImageButton btnscan,profile,btnriwayat,home,pencarian,btnback;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_riwayat);
-        btnBack=findViewById(R.id.btnBack);
-        btnriwayat=findViewById(R.id.btnriwayat);
-        home=findViewById(R.id.home);
-        pencarian=findViewById(R.id.pencarian);
-        profile=findViewById(R.id.profile);
-        btnscan=findViewById(R.id.btnscan);
+
+        setContentView(R.layout.activity_konfirmasi);
+
+        btnback = findViewById(R.id.btnback);
+        profile = findViewById(R.id.profile);
+        btnscan = findViewById(R.id.btnscan);
+        btnriwayat = findViewById(R.id.btnriwayat);
+        home = findViewById(R.id.home);
+        pencarian = findViewById(R.id.pencarian);
 
         pencarian.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -31,12 +33,6 @@ private ImageButton btnBack,btnriwayat,profile,btnscan,home,pencarian;
             }
         });
         home.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(),Homepage.class));
-            }
-        });
-        btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getApplicationContext(),Homepage.class));
@@ -60,6 +56,12 @@ private ImageButton btnBack,btnriwayat,profile,btnscan,home,pencarian;
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getApplicationContext(),Riwayat.class));
+            }
+        });
+        btnback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(),Checkout.class));
             }
         });
     }

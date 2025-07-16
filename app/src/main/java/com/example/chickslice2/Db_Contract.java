@@ -7,4 +7,3 @@ public class Db_Contract {
 
 
 }
-

@@ -1,7 +1,6 @@
 package com.example.chickslice2;
 
 import android.content.Intent;
-import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -13,28 +12,30 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class Checkout extends AppCompatActivity {
-private Button bayar;
-private ImageButton btnBack;
+public class Detail_Produk4 extends AppCompatActivity {
+    private ImageButton btnback;
+    private Button btnbeli;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_checkout);
+        EdgeToEdge.enable(this);
+        setContentView(R.layout.activity_detail_produk4);
 
-        bayar=findViewById(R.id.bayar);
-        btnBack=findViewById(R.id.btnBack);
+        btnback=findViewById(R.id.btnback);
+        btnbeli=findViewById(R.id.btnbeli);
 
-        bayar.setOnClickListener(new View.OnClickListener() {
+        btnback.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(),Konfirmasi.class));
+                startActivity(new Intent(getApplicationContext(),Homepage.class));
             }
         });
-        btnBack.setOnClickListener(new View.OnClickListener() {
+        btnbeli.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(),Detail_Produk.class));
+                startActivity(new Intent(getApplicationContext(),Checkout.class));
             }
         });
+
     }
 }
